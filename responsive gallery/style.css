@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+  }
+  
+  .logo {
+    width: 60px;
+    margin-top: -10px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  
+  ul {
+    display: flex;
+    /* added padding-inline-start to overwrite styling issue for some browsers */
+    padding-inline-start: 0;
+  }
+  
+  li {
+    list-style-type: none;
+    padding: 20px;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .container {
+    width: 20%;
+    position: relative;
+    transition: transform 500ms;
+    display: block;
+  }
+  
+  .container img {
+    width: 100%;
+    opacity: 1;
+    height: auto;
+    display: block;
+  }
+  
+  .row .container:focus,
+  .row .container:hover {
+    transform: scale(1.3);
+    z-index: 1;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    transform: translate( -50%, -50%);
+    text-align: center;
+  }
+  
+  .container:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    width: 100%;
+  }
+
+  footer a {
+      color: black;
+  }
+  footer a:hover {
+    color: #4873b5;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #4873b5;
+  }
+
+  a:hover {
+    letter-spacing: 2px;
+  }
+  
+  @media only screen and (max-width: 1500px) {
+    .text {
+      font-size: 10px;
+      padding: 32px 16px;
+    }
+
+    .hero{
+        margin-bottom: 20px;
+    }
+  
+    /* footer {
+      position: sticky;
+      bottom: 0;
+    } */
+  }
+  
+  @media only screen and (max-width: 800px) {
+   .disappear {
+     display: none;
+   }
+  
+   .container {
+     width: 100%;
+   }
+  
+   .row .container:focus,
+   .row .container:hover {
+     transform: none;
+     z-index: 1;
+   }
+  
+   footer {
+     position: relative;
+   }
+  
+   .text {
+    font-size: 32px;
+    padding: 32px 16px;
+  }
+  
+  }
+  
